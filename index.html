@@ -50,7 +50,7 @@
                 <!--? NavBar Right Side Items -->
                 <div id="nav-items" class="flex items-center gap-x-8">
                     <!--? Completed Tasks Count -->
-                    <div id="completed-tasks" class="flex items-center gap-x-2 px-4 py-2 rounded-[2rem] bg-blue-100 group" title="Completed Tasks">
+                    <div id="completed-tasks" class="flex items-center gap-x-2 px-4 py-2 rounded-[2rem] bg-[#E0F6FF] group" title="Completed Tasks">
                         <img src="./images/check-mark.png" alt="Check Mark" class="group-hover:contrast-150 transition-[filter] duration-200">
                         <h4 class="text-2xl font-bold">10</h4>
                     </div>
@@ -67,7 +67,7 @@
                 <!--? Dashboard's Header -->
                 <div id="dashboard-header" class="grid lg:grid-cols-2 lg:grid-rows-2 lg:[grid-template-areas:'blogAd_blogAd''tasksAssigned_todayDate'] 2xl:grid-cols-4 2xl:grid-rows-1 2xl:[grid-template-areas:'tasksAssigned_blogAd_blogAd_todayDate'] lg:gap-4 xl:gap-8 2xl:gap-6">
                     <!--? Assigned Tasks Count -->
-                    <div id="assigned-tasks" class="[grid-area:tasksAssigned] p-6 rounded-lg bg-[#E0F0FF] flex items-center gap-x-5">
+                    <div id="assigned-tasks" class="[grid-area:tasksAssigned] p-6 rounded-lg bg-[#E5F9FF] flex items-center gap-x-5">
                         <div class="bg-slate-50 p-4 rounded-full group">
                             <img src="./images/check-mark.png" alt="Check Mark" class="group-hover:scale-110 transition-transform duration-300">
                         </div>
@@ -77,17 +77,19 @@
                         </div>
                     </div>
                     <!--? Blog Advertisement -->
-                    <div id="blog-ad" class="[grid-area:blogAd] px-10 py-6 rounded-lg lg:rounded-xl bg-gradient-to-r from-primary to-indigo-300 flex items-center gap-x-5 group">
-                        <img src="./images/board.png" alt="Blog Board" class="group-hover:-rotate-[10deg] transition-transform duration-200">
-                        <h4 class="text-2xl font-medium text-[#F0FFFF]">Discover Something New Today!</h4>
-                    </div>
+                    <a href="./blog.html" class="[grid-area:blogAd]">
+                        <div id="blog-ad" class="px-10 py-6 rounded-lg lg:rounded-xl bg-gradient-to-r from-primary to-indigo-300 flex items-center gap-x-5 group active:cursor-click hover:cursor-hover">
+                            <img src="./images/board.png" alt="Blog Board" class="group-hover:-rotate-[10deg] transition-transform duration-200">
+                            <h4 class="text-2xl font-medium text-[#F0FFFF]">Discover Something New Today!</h4>
+                        </div>
+                    </a>
                     <!--? Current Day/Date -->
-                    <div id="today-date" class="[grid-area:todayDate] p-6 rounded-lg bg-[#E0F0FF] flex items-center gap-x-5">
+                    <div id="today-date" class="[grid-area:todayDate] p-6 rounded-lg bg-[#E5F9FF] flex items-center gap-x-5">
                         <div class="bg-slate-50 p-3 rounded-full group">
                             <img src="./images/calendar.png" alt="Calendar" class="group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <div>
-                            <h4 class="text-2xl font-bold"><span class="font-normal">Sat</span> <br class="xl:hidden 2xl:inline">Mar 1 2025</h4>
+                            <h4 class="text-2xl font-bold"><span class="font-normal"></span> <br class="xl:hidden 2xl:inline"><span></span></h4>
                         </div>
                     </div>
                 </div>
@@ -95,7 +97,7 @@
                 <div id="dashboard-divider" class="border border-blue-200 border-dashed border-opacity-55"></div>
                 <!--? Dashboard's Main Part containing 6 recent Pending Tasks -->
                 <div id="dashboard-tasks" class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 2xl:gap-10">
-                    <div class="p-6 space-y-3 rounded-xl bg-[#E0F0FF]">
+                    <div class="task-card p-6 space-y-3 rounded-xl bg-[#E5F9FF]">
                         <div class="space-y-4">
                             <p class="company px-3 py-1 bg-[#F0FFFF] rounded-md w-fit">SecureByte</p>
                             <h4 class="title text-2xl font-medium">Transform into Database</h4>
@@ -107,10 +109,10 @@
                                 <p class="text-sm text-gray-500">Deadline</p>
                                 <p class="font-medium">13 March 2025</p>
                             </div>
-                            <button type="button" class="shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
+                            <button type="button" class="complete-btn shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
                         </div>
                     </div>
-                    <div class="p-6 space-y-3 rounded-xl bg-[#E0F0FF]">
+                    <div class="task-card p-6 space-y-3 rounded-xl bg-[#E5F9FF]">
                         <div class="space-y-4">
                             <p class="company px-3 py-1 bg-[#F0FFFF] rounded-md w-fit">Programming Hero</p>
                             <h4 class="title text-2xl font-medium">Enable HelpDesk</h4>
@@ -122,10 +124,10 @@
                                 <p class="text-sm text-gray-500">Deadline</p>
                                 <p class="font-medium">04 March 2025</p>
                             </div>
-                            <button type="button" class="shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
+                            <button type="button" class="complete-btn shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
                         </div>
                     </div>
-                    <div class="p-6 space-y-3 rounded-xl bg-[#E0F0FF]">
+                    <div class="task-card p-6 space-y-3 rounded-xl bg-[#E5F9FF]">
                         <div class="space-y-4">
                             <p class="company px-3 py-1 bg-[#F0FFFF] rounded-md w-fit">Phitron</p>
                             <h4 class="title text-2xl font-medium">Add Dark Theme</h4>
@@ -137,22 +139,68 @@
                                 <p class="text-sm text-gray-500">Deadline</p>
                                 <p class="font-medium">07 March 2025</p>
                             </div>
-                            <button type="button" class="shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
+                            <button type="button" class="complete-btn shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
+                        </div>
+                    </div>
+                    <div class="task-card p-6 space-y-3 rounded-xl bg-[#E5F9FF]">
+                        <div class="space-y-4">
+                            <p class="company px-3 py-1 bg-[#F0FFFF] rounded-md w-fit">Google Search</p>
+                            <h4 class="title text-2xl font-medium">Improve Image Filtering</h4>
+                            <p class="description p-4 bg-[#F0FFFF] text-gray-500 rounded-lg truncate">Improve Images that <br class="max-lg:hidden xl:hidden">Google <br class="max-2xl:hidden">suggests <br class="inline lg:hidden xl:inline 2xl:hidden">in the Images Tab in a Search Result.</p>
+                        </div>
+                        <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                        <div class="flex justify-between items-center">
+                            <div class="deadline">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="font-medium">16 March 2025</p>
+                            </div>
+                            <button type="button" class="complete-btn shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
+                        </div>
+                    </div>
+                    <div class="task-card p-6 space-y-3 rounded-xl bg-[#E5F9FF]">
+                        <div class="space-y-4">
+                            <p class="company px-3 py-1 bg-[#F0FFFF] rounded-md w-fit">Programming Hero</p>
+                            <h4 class="title text-2xl font-medium">Enable HelpDesk</h4>
+                            <p class="description p-4 bg-[#F0FFFF] text-gray-500 rounded-lg truncate">Enable posting and <br class="max-lg:hidden xl:hidden">seeing <br class="max-2xl:hidden">posts <br class="inline lg:hidden xl:inline 2xl:hidden">on HelpDesk, and improve HelpDesk.</p>
+                        </div>
+                        <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                        <div class="flex justify-between items-center">
+                            <div class="deadline">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="font-medium">04 March 2025</p>
+                            </div>
+                            <button type="button" class="complete-btn shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
+                        </div>
+                    </div>
+                    <div class="task-card p-6 space-y-3 rounded-xl bg-[#E5F9FF]">
+                        <div class="space-y-4">
+                            <p class="company px-3 py-1 bg-[#F0FFFF] rounded-md w-fit">Phitron</p>
+                            <h4 class="title text-2xl font-medium">Add Dark Theme</h4>
+                            <p class="description p-4 bg-[#F0FFFF] text-gray-500 rounded-lg truncate">Add Dark Mode <br class="max-lg:hidden xl:hidden">in the <br class="max-2xl:hidden">Website <br class="inline lg:hidden xl:inline 2xl:hidden">so it doesn't hurt Programmers.</p>
+                        </div>
+                        <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                        <div class="flex justify-between items-center">
+                            <div class="deadline">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="font-medium">07 March 2025</p>
+                            </div>
+                            <button type="button" class="complete-btn shadow shadow-primary hover:shadow-md hover:shadow-blue-600 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-shadow">Complete</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="activities" class="space-y-6 p-6 rounded-xl bg-[#F0FFFF]">
+            <section id="activity-log" class="space-y-6 p-6 rounded-xl bg-[#F0FFFF]">
                 <div id="activity-log-header" class="flex flex-col gap-y-4 items-center">
                     <div class="flex gap-x-3 items-center">
                         <img src="./images/activity.png" alt="Activities">
                         <h5 class="text-xl font-medium">Activity Log</h5>
                     </div>
-                    <button type="button" class="hover:scale-105 active:scale-[95%] hover:shadow hover:shadow-primary active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-transform">Clear History</button>
+                    <button type="button" class="hover:scale-105 active:scale-100 hover:shadow-sm hover:shadow-primary active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] font-medium transition-transform">Clear History</button>
                     <div class="border border-blue-200 border-dashed w-full border-opacity-55"></div>
                 </div>
+                <div id="activities" class="space-y-6"></div>
             </section>
         </main>
-        <script src="./scripts/script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="icon" href="./images/logo.png" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+        <title>FAQ - DevBoard</title>
+        <style>
+            ::-webkit-scrollbar {
+                width: 0.8rem;
+            }
+            ::-webkit-scrollbar-track {
+                background: #000060;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #1530DB;
+            }
+        </style>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3752FD',
+                        text: '#00303C',
+                    },
+                    fontFamily: {
+                        nunito: ['Nunito Sans', 'sans-serif'],
+                    },
+                    cursor: {
+                        'main': 'url(./images/cursor.png), auto',
+                        'hover': 'url(./images/hover.png), auto',
+                        'click': 'url(./images/click.png), auto',
+                    }
+                }
+            }
+        }
+        </script>
+    </head>
+    <body class="bg-blue-100 text-text font-nunito cursor-main active:cursor-click py-6 space-y-8">
+        <header class="px-36">
+            <nav class="flex justify-between items-center bg-[#F0FFFF] rounded-xl p-6">
+                <!--? Logo & Title -->
+                <div id="logo-title" class="flex items-center gap-x-3">
+                    <img src="./images/logo.png" alt="Logo" class="w-10">
+                    <h3 class="font-bold text-3xl"><span class="font-light">Dev</span>Board</h3>
+                </div>
+                <!--? NavBar Right Side Button -->
+                <a href="./index.html"><button class="hover:contrast-125 active:contrast-100 hover:shadow-md hover:shadow-slate-500 active:shadow-none active:cursor-click hover:cursor-hover px-5 py-2 bg-primary rounded-md text-[#F0FFFF] text-xl font-medium transition-[filter_shadow]">Back to Desk</button></a>
+            </nav>
+        </header>
+        <main class="px-36 space-y-6">
+            <h2 class="text-4xl font-bold text-center">Blogs</h2>
+            <!--? Frequently Asked Questions -->
+            <div class="faq-box space-y-4 p-6 rounded-lg bg-[#F0FFFF]">
+                <div class="question flex items-center gap-x-4">
+                    <img src="./images/question.png" alt="Question">
+                    <h3 class="text-3xl font-bold">What are the different ways to select an element in the DOM?</h3>
+                </div>
+                <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                <div class="answer flex gap-x-4">
+                    <img src="./images/answer.png" alt="Answer" class="self-start">
+                    <p class="text-lg">There are 5 different ways. They are:<br/>
+                        <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">getElementsByTagName(tagName: string)</code> which returns a HTMLCollection of all the elements based on a specific Tag.<br/>
+                        <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">getElementById(id: string)</code> which returns a single element based on a specific Id.<br/>
+                        <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">getElementsByClassName(class: string)</code> which returns a HTMLCollection of all the elements based on a specific Class.<br/>
+                        <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">querySelector(cssQuery: string)</code> which returns a signle element based on a specific CSS Query.<br/>
+                        <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">querySelectorAll(cssQuery: string)</code> which returns a NodeList of all the elements based on a specific CSS Query.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-box space-y-4 p-6 rounded-lg bg-[#F0FFFF]">
+                <div class="question flex items-center gap-x-4">
+                    <img src="./images/question.png" alt="Question">
+                    <h3 class="text-3xl font-bold">What is the difference between innerHTML, innerText and textContent?</h3>
+                </div>
+                <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                <div class="answer flex gap-x-4">
+                    <img src="./images/answer.png" alt="Answer" class="self-start">
+                    <p class="text-lg"><code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">innerHTML</code> returns the HTML Nodes inside the target element, while <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">innerText</code> and <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">textContent</code> only returns the text (text nodes, not elements/attribute nodes) inside the target element. But there are difference between <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">innerText</code> and <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">textContent</code>. <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">innerText</code> only returns the text that are visible in webpage, meaning that are not hidden (like not have <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">display: none;</code>), while <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">textContent</code> returns all texts including that are hidden.</p>
+                </div>
+            </div>
+            <div class="faq-box space-y-4 p-6 rounded-lg bg-[#F0FFFF]">
+                <div class="question flex items-center gap-x-4">
+                    <img src="./images/question.png" alt="Question">
+                    <h3 class="text-3xl font-bold">What is event delegation in DOM?</h3>
+                </div>
+                <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                <div class="answer flex gap-x-4">
+                    <img src="./images/answer.png" alt="Answer" class="self-start">
+                    <p class="text-lg">Event Delegation is a concept where you add a single EventListener to the target parent element instead of adding event listeners to all the childs. Like I used it in every Task Card in the Home Page to track the 'Complete' Button.</p>
+                </div>
+            </div>
+            <div class="faq-box space-y-4 p-6 rounded-lg bg-[#F0FFFF]">
+                <div class="question flex items-center gap-x-4">
+                    <img src="./images/question.png" alt="Question">
+                    <h3 class="text-3xl font-bold">What is event bubbling in DOM?</h3>
+                </div>
+                <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                <div class="answer flex gap-x-4">
+                    <img src="./images/answer.png" alt="Answer" class="self-start">
+                    <p class="text-lg">Event Bubbling is a process where the event starts from the target element and then bubbles up to its parent element until it reaches the root/html element (<code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">document</code>)</p>
+                </div>
+            </div>
+            <div class="faq-box space-y-4 p-6 rounded-lg bg-[#F0FFFF]">
+                <div class="question flex items-center gap-x-4">
+                    <img src="./images/question.png" alt="Question">
+                    <h3 class="text-3xl font-bold">How do you create, add, and remove elements using JavaScript?</h3>
+                </div>
+                <div class="border border-blue-200 border-dashed border-opacity-55"></div>
+                <div class="answer flex gap-x-4">
+                    <img src="./images/answer.png" alt="Answer" class="self-start">
+                    <p class="text-lg">We can create an element using the <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">document.createElement(tagName: string)</code> method. And can add the element inside an element as a child using <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">parentElement.appendChild(element: string)</code> method, but note that it appends the child at the last. And can remove a child using <code class="bg-slate-700 text-blue-400 p-1 text-[1rem] rounded-md">parentElement.appendChild(child: string)</code> method.</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
